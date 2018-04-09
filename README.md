@@ -11,16 +11,10 @@ One to two paragraph statement about your product and what it does.
 
 ## Installation
 
-OS X & Linux:
-
-```sh
-npm install my-crazy-module --save
-```
-
 Windows:
 
-```sh
-edit autoexec.bat
+```tqdm Package
+conda install -c conda-forge tqdm
 ```
 
 ## Usage example
