@@ -13,6 +13,7 @@ One to two paragraph statement about your product and what it does.
 
 Windows:
 
+tqdm Package
 ```tqdm Package
 conda install -c conda-forge tqdm
 ```
