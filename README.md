@@ -13,6 +13,11 @@ One to two paragraph statement about your product and what it does.
 
 Windows:
 
+Install Anaconda - Version 5.1 with Python 3.6
+```tqdm Package
+https://www.anaconda.com/download/
+```
+
 tqdm Package
 ```tqdm Package
 conda install -c conda-forge tqdm
