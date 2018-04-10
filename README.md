@@ -31,7 +31,7 @@ conda install keras
 ```
 Install OpenCV3 package
 ```Opencv3 Packageconda 
-install --channel https://conda.anaconda.org/menpo opencv3
+conda install -c conda-forge opencv 
 ```
 tqdm Package
 ```tqdm Package
