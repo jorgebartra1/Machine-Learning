@@ -17,7 +17,7 @@ Install Anaconda - Version 5.1 with Python 3.6
 ```tqdm Package
 https://www.anaconda.com/download/
 ```
-Install OPENCV3 package
+Install OpenCV3 package
 ```Opencv3 Packageconda 
 install --channel https://conda.anaconda.org/menpo opencv3
 ```
