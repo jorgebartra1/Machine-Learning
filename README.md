@@ -17,6 +17,18 @@ Install Anaconda - Version 5.1 with Python 3.6
 ```tqdm Package
 https://www.anaconda.com/download/
 ```
+Install Theano
+```Theano Package
+conda install theano
+```
+Install Tensorflow
+```Tensorflow Package
+conda install tensorflow
+```
+Install Keras
+```Keras Package
+conda install keras
+```
 Install OpenCV3 package
 ```Opencv3 Packageconda 
 install --channel https://conda.anaconda.org/menpo opencv3
