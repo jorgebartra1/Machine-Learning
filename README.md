@@ -37,14 +37,23 @@ Install OpenCV3 package
 ```Opencv3 Packageconda 
 conda install -c conda-forge opencv 
 ```
-Install PILLOW package
+Install PILLOW package (PIL does not work with OPENCV3)
 ```
 conda install pillow 
 ```
 tqdm Package
-```tqdm Package
+```
 conda install -c conda-forge tqdm
 ```
+Install Scikit-Learn Package
+```
+conda install -c anaconda scikit-learn
+```
+Install Scikit-Learn Package
+```
+conda install -c conda-forge matplotlib
+```
+
 
 ## Usage example
 
