@@ -49,7 +49,7 @@ Install Scikit-Learn Package
 ```
 conda install -c anaconda scikit-learn
 ```
-Install Scikit-Learn Package
+Install Matplotlib Package
 ```
 conda install -c conda-forge matplotlib
 ```
