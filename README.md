@@ -13,9 +13,13 @@ One to two paragraph statement about your product and what it does.
 
 Windows:
 
-Install Anaconda - Version 5.1 with Python 3.6
-```tqdm Package
+Install Anaconda - Python 2.7
+```
 https://www.anaconda.com/download/
+```
+Create a new environment with Python 2.7
+```
+conda create -n myenv python=2.7
 ```
 Install Theano
 ```Theano Package
@@ -32,6 +36,10 @@ conda install keras
 Install OpenCV3 package
 ```Opencv3 Packageconda 
 conda install -c conda-forge opencv 
+```
+Install PILLOW package
+```
+conda install pillow 
 ```
 tqdm Package
 ```tqdm Package
