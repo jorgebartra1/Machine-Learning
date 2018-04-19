@@ -1,11 +1,11 @@
-# Machine Learning - Image Classifier
-> Short blurb about what your product does.
+# Machine Learning - Image Classifier - Installation Guide
+> 
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-One to two paragraph statement about your product and what it does.
+This page is a guide to developers who want to use ANACONDA to perform Machine Learning Models with CNN on their local computers .
 
 ![](header.png)
 
