@@ -65,6 +65,10 @@ conda install -c conda-forge matplotlib
 ## Usage example
 
 Find if the image used in the model belongs to a HUMAN person. If the image is a human then find the face(s), eyes and smile.
+See the screen shot below the code:
+
+![facefeatures](https://user-images.githubusercontent.com/14510359/39091509-3d71031a-45c3-11e8-9e4f-946331a6298c.png)
+
 
 ```
 ## face detection algorithm on the LFW dataset
