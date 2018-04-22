@@ -1,5 +1,6 @@
 # Machine Learning - Image Classifier - Installation Guide
-> 
+> Select the URL below for more details
+https://jorgebartra1.github.io/Machine-Learning/
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
