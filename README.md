@@ -8,6 +8,9 @@ https://jorgebartra1.github.io/Machine-Learning/
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
+## Project Overview
+Welcome to the Convolutional Neural Networks (CNN) project in the Machine Learning Engineer Nanodegree! In this project, you will learn how to build a pipeline that can be used within a web or mobile app to process real-world, user-supplied images. Given an image of a dog, your algorithm will identify an estimate of the canine’s breed. If supplied an image of a human, the code will identify the resembling dog breed.
+
 This page is a guide to developers who want to use ANACONDA to perform Machine Learning Models with CNN on their local computers .
 
 ![](header.png)
