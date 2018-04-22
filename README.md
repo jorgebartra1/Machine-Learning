@@ -2,6 +2,8 @@
 > Select the URL below for more details
 https://jorgebartra1.github.io/Machine-Learning/
 
+![imagecnn](https://user-images.githubusercontent.com/14510359/39091327-e85a2fe4-45bf-11e8-9fe6-a094c33bf505.png)
+
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
