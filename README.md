@@ -1,4 +1,4 @@
-# Machine Learning - Image Classifier - Installation Guide
+# Machine Learning - Convolutional Neural Networks and Image Classifier 
 > Select the URL below for more details
 https://jorgebartra1.github.io/Machine-Learning/
 
