@@ -64,7 +64,56 @@ conda install -c conda-forge matplotlib
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+Find if the image used in the model belongs to a HUMAN person. If the image is a human then find the face(s), eyes and smile.
+
+```
+## face detection algorithm on the LFW dataset
+import cv2                
+import matplotlib.pyplot as plt                        
+%matplotlib inline                               
+
+# extract pre-trained face detector
+face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_eye.xml')
+smile_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_smile.xml')
+
+#print (human_files[10])
+
+# load color (BGR) image
+img = cv2.imread(human_files[11])
+
+
+# convert BGR image to grayscale
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+
+# find faces in image
+faces = face_cascade.detectMultiScale(gray,1.04, 3)
+
+# print number of faces detected in the image
+print('Number of faces detected:', len(faces))
+
+# get bounding box for each detected face
+for (x,y,w,h) in faces:
+    # add bounding box to color image
+    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
+    roi_gray = gray[y:y+h, x:x+w]
+    roi_color = img[y:y+h, x:x+w]
+    eyes = eye_cascade.detectMultiScale(roi_gray)
+    #for (ex,ey,ew,eh) in eyes:
+    for (ex,ey,ew,eh) in eyes:    
+        cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
+        smiles = smile_cascade.detectMultiScale(roi_gray)
+        for (x2, y2, w2, h2) in smiles:
+            cv2.rectangle(roi_color, (x2, y2), (x2+w2, y2+h2), (0, 0, 255), 2)
+        
+# convert BGR image to RGB for plotting
+cv_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+# display the image, along with bounding box
+plt.imshow(cv_rgb)
+plt.show()
+```
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
