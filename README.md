@@ -16,7 +16,7 @@ This page is a guide to developers who want to use ANACONDA to perform Machine L
 
 ![](header.png)
 
-## Installation
+## Development setup
 
 Windows:
 
@@ -67,15 +67,6 @@ conda install -c conda-forge matplotlib
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
 
 ## Release History
 
