@@ -118,6 +118,26 @@ cv_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 plt.imshow(cv_rgb)
 plt.show()
 ```
+##Create a CNN to Classify Dog Breeds (using Transfer Learning)
+You will now use transfer learning to create a CNN that can identify dog breed from images. 
+
+In this section, you must use the bottleneck features from a different pre-trained model. To make things easier for you, we have pre-computed the features for all of the networks that are currently available in Keras:
+
+VGG-19 bottleneck features
+ResNet-50 bottleneck features
+Inception bottleneck features
+Xception bottleneck features
+
+##First Code Snippet
+```
+import numpy as np
+from keras.optimizers import Adam, Adamax
+from keras import regularizers
+bottleneck_features = np.load('bottleneck_features/DogResnet50Data.npz')
+train_DogResnet50 = bottleneck_features['train']
+valid_DogResnet50 = bottleneck_features['valid']
+test_DogResnet50 = bottleneck_features['test']
+```
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
