@@ -147,11 +147,6 @@ Use the code below
 test_accuracy = 100*np.sum(np.array(dog_breed_predictions)==np.argmax(test_targets, axis=1))/len(dog_breed_predictions)
 print('Test accuracy: %.4f%%' % test_accuracy)
 ```
-
-# get index of predicted dog breed for each image in test set
-dog_breed_predictions = [np.argmax(model.predict(np.expand_dims(tensor, axis=0))) for tensor in test_tensors]
-
-
 ## Create a CNN to Classify Dog Breeds (using Transfer Learning)
 You will now use transfer learning to create a CNN that can identify dog breed from images. 
 
@@ -161,6 +156,18 @@ VGG-19 bottleneck features
 ResNet-50 bottleneck features
 Inception bottleneck features
 Xception bottleneck features
+
+#I used ResNet-50 
+See the code below
+```
+import numpy as np
+from keras.optimizers import Adam, Adamax
+from keras import regularizers
+bottleneck_features = np.load('bottleneck_features/DogResnet50Data.npz')
+train_DogResnet50 = bottleneck_features['train']
+valid_DogResnet50 = bottleneck_features['valid']
+test_DogResnet50 = bottleneck_features['test']
+```
 
 ##First Code Snippet
 ```
