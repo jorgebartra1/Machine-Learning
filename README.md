@@ -142,7 +142,7 @@ model.add(Dense(leght_kbreed, activation='softmax'))
 model.summary()
 ```
 ### Test Accuracy obtained 8.1340 %
-Use the code below
+Used the code below
 ```
 test_accuracy = 100*np.sum(np.array(dog_breed_predictions)==np.argmax(test_targets, axis=1))/len(dog_breed_predictions)
 print('Test accuracy: %.4f%%' % test_accuracy)
@@ -157,7 +157,7 @@ ResNet-50 bottleneck features
 Inception bottleneck features
 Xception bottleneck features
 
-#I used ResNet-50 
+# I used ResNet-50 
 See the code below
 ```
 import numpy as np
@@ -168,20 +168,34 @@ train_DogResnet50 = bottleneck_features['train']
 valid_DogResnet50 = bottleneck_features['valid']
 test_DogResnet50 = bottleneck_features['test']
 ```
-
-##First Code Snippet
+## Model Architecture
 ```
-import numpy as np
-from keras.optimizers import Adam, Adamax
-from keras import regularizers
-bottleneck_features = np.load('bottleneck_features/DogResnet50Data.npz')
-train_DogResnet50 = bottleneck_features['train']
-valid_DogResnet50 = bottleneck_features['valid']
-test_DogResnet50 = bottleneck_features['test']
+Resnet_model = Sequential()
+Resnet_model.add(GlobalAveragePooling2D(input_shape=train_DogResnet50.shape[1:]))
+Resnet_model.add(Dense(150, activation='relu', kernel_regularizer=regularizers.l2(0.01)))
+Resnet_model.add(Dropout(0.2))
+Resnet_model.add(Dense(133, activation='softmax'))
+Resnet_model.summary()
 ```
 
+## Training the Model
+```
+checkpointer = ModelCheckpoint(filepath='saved_models/weights.best.ResNet50.hdf5', 
+                               verbose=1, save_best_only=True)
 
-##Below are some samples of the results obtained using 
+Resnet_model.fit(train_DogResnet50, train_targets, 
+          validation_data=(valid_DogResnet50, valid_targets),
+          epochs=26, batch_size=30, callbacks=[checkpointer], verbose=1)
+```
+
+### Test Accuracy obtained 83.3732 %
+Use the code below
+```
+test_accuracy = 100*np.sum(np.array(Resnet50_predictions)==np.argmax(test_targets, axis=1))/len(Resnet50_predictions)
+print('Test accuracy: %.4f%%' % test_accuracy)
+```
+
+## Below are some samples of the results obtained using 
 
 
 
