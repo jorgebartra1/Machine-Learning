@@ -122,7 +122,27 @@ plt.show()
 The below is just a sample model architecture
 ![modelsample](https://user-images.githubusercontent.com/14510359/39160579-1201d132-473a-11e8-87a7-6fab1d9cf1cc.png)
 
-##Create a CNN to Classify Dog Breeds (using Transfer Learning)
+Architecture used in the model:
+```
+from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D
+from keras.layers import Dropout, Flatten, Dense
+from keras.models import Sequential
+
+model = Sequential()
+model.add(Conv2D(filters =20, kernel_size = (7,7), strides = (2,2), padding = 'valid', activation='relu', input_shape=(image_W, image_H, 3)))#train_tensors[0].shape))
+model.add(MaxPooling2D(pool_size=(2, 2), strides=(2,2), padding='valid'))
+model.add(Conv2D(filters =40, kernel_size = (7,7), strides = (4,4), padding = 'valid', activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2),  strides=(4,4), padding='valid'))
+model.add(Conv2D(filters =80, kernel_size = (3,3), strides = (4,4), padding = 'valid', activation='relu'))
+model.add(GlobalAveragePooling2D())
+#model.add(Flatten())
+model.add(Dense(100, activation='relu'))
+model.add(Dropout(0.2))
+model.add(Dense(leght_kbreed, activation='softmax'))
+model.summary()
+```
+
+## Create a CNN to Classify Dog Breeds (using Transfer Learning)
 You will now use transfer learning to create a CNN that can identify dog breed from images. 
 
 In this section, you must use the bottleneck features from a different pre-trained model. To make things easier for you, we have pre-computed the features for all of the networks that are currently available in Keras:
