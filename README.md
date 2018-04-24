@@ -118,7 +118,7 @@ cv_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 plt.imshow(cv_rgb)
 plt.show()
 ```
-##Model Architecture Example
+## Model Architecture Example
 The below is just a sample model architecture
 ![modelsample](https://user-images.githubusercontent.com/14510359/39160579-1201d132-473a-11e8-87a7-6fab1d9cf1cc.png)
 
