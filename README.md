@@ -195,9 +195,12 @@ test_accuracy = 100*np.sum(np.array(Resnet50_predictions)==np.argmax(test_target
 print('Test accuracy: %.4f%%' % test_accuracy)
 ```
 
-## Below are some samples of the results obtained using 
+## Below are some samples of the results obtained using
+Using the Pre-Trained Images given by UDACITY
 ![results](https://user-images.githubusercontent.com/14510359/39162420-6a7dcb64-4743-11e8-8f8d-d0f22fbba77a.png)
 
+Results obtained using my own images
+![results2](https://user-images.githubusercontent.com/14510359/39162543-0a61d792-4744-11e8-9e5e-65d1c584dfe3.png)
 
 
 
