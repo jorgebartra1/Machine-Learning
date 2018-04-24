@@ -65,7 +65,7 @@ conda install -c conda-forge matplotlib
 ## Usage example
 
 Find if the image used in the model belongs to a HUMAN person. If the image is a human then find the face(s), eyes and smile.
-See the screen shot and the code below:
+See the screen shot sample of the code below:
 
 ![facefeatures](https://user-images.githubusercontent.com/14510359/39091509-3d71031a-45c3-11e8-9e4f-946331a6298c.png)
 
@@ -118,6 +118,9 @@ cv_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 plt.imshow(cv_rgb)
 plt.show()
 ```
+##Model Architecture Example
+
+
 ##Create a CNN to Classify Dog Breeds (using Transfer Learning)
 You will now use transfer learning to create a CNN that can identify dog breed from images. 
 
@@ -139,7 +142,9 @@ valid_DogResnet50 = bottleneck_features['valid']
 test_DogResnet50 = bottleneck_features['test']
 ```
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+
+##Below are some samples of the results obtained using 
+
 
 
 
