@@ -188,7 +188,7 @@ Resnet_model.fit(train_DogResnet50, train_targets,
           epochs=26, batch_size=30, callbacks=[checkpointer], verbose=1)
 ```
 
-### Test Accuracy obtained 83.3732 %
+## Test Accuracy obtained 83.3732 %
 Use the code below
 ```
 test_accuracy = 100*np.sum(np.array(Resnet50_predictions)==np.argmax(test_targets, axis=1))/len(Resnet50_predictions)
