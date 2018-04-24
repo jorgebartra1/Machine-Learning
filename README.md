@@ -202,6 +202,47 @@ Using the Pre-Trained Images given by UDACITY
 Results obtained using my own images
 ![results2](https://user-images.githubusercontent.com/14510359/39162543-0a61d792-4744-11e8-9e5e-65d1c584dfe3.png)
 
+The code used is given below:
+```
+from extract_bottleneck_features import *
 
+def checkingDogBreed(img_path):
+    # extract bottleneck features
+    bottleneck_feature = extract_Resnet50(path_to_tensor(img_path))
+    
+    #predicted_vector = Resnet50_model.predict(bottleneck_feature)
+    predicted_vector = Resnet_model.predict(bottleneck_feature)
+    return dog_names[np.argmax(predicted_vector)]
 
+def predictDogBreed(img_path):
+    breed = checkingDogBreed(img_path) 
+    
+    # Display faces
+    img = cv2.imread(img_path)
+    cv_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    plt.imshow(cv_rgb)
+    plt.show()
+    
+    # Checking for the breed
+    br = str(breed)
+    name = br[br.find('.')+1:]
+    
+    if dog_detector(img_path):
+        print("The breed of dog is a: " + name )
+    elif face_detector(img_path):
+        print("Human face detected, but it looks like a: " + name)
+    else:
+        print("Model unable to detect a human neither a dog!")
+
+Picking Random
+predictDogBreed(valid_files[0])
+```
+# Loading my own images and runing the model
+```
+local_files = np.array(glob("images/OwnImages/*"))
+print(local_files)
+
+for path in local_files:
+    predictDogBreed(path)
+```
 
