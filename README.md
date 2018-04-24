@@ -141,7 +141,12 @@ model.add(Dropout(0.2))
 model.add(Dense(leght_kbreed, activation='softmax'))
 model.summary()
 ```
-### Accuracy obtained
+### Test Accuracy obtained 8.1340 %
+Use the code below
+```
+test_accuracy = 100*np.sum(np.array(dog_breed_predictions)==np.argmax(test_targets, axis=1))/len(dog_breed_predictions)
+print('Test accuracy: %.4f%%' % test_accuracy)
+```
 
 # get index of predicted dog breed for each image in test set
 dog_breed_predictions = [np.argmax(model.predict(np.expand_dims(tensor, axis=0))) for tensor in test_tensors]
