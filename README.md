@@ -141,6 +141,11 @@ model.add(Dropout(0.2))
 model.add(Dense(leght_kbreed, activation='softmax'))
 model.summary()
 ```
+### Accuracy obtained
+
+# get index of predicted dog breed for each image in test set
+dog_breed_predictions = [np.argmax(model.predict(np.expand_dims(tensor, axis=0))) for tensor in test_tensors]
+
 
 ## Create a CNN to Classify Dog Breeds (using Transfer Learning)
 You will now use transfer learning to create a CNN that can identify dog breed from images. 
