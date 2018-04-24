@@ -196,7 +196,7 @@ print('Test accuracy: %.4f%%' % test_accuracy)
 ```
 
 ## Below are some samples of the results obtained using 
-![results](https://user-images.githubusercontent.com/14510359/39162285-ceb86e00-4742-11e8-8430-c088984dc5e7.png)
+![results](https://user-images.githubusercontent.com/14510359/39162420-6a7dcb64-4743-11e8-8f8d-d0f22fbba77a.png)
 
 
 
