@@ -157,7 +157,7 @@ ResNet-50 bottleneck features
 Inception bottleneck features
 Xception bottleneck features
 
-# I used ResNet-50 
+## I used ResNet-50 
 See the code below
 ```
 import numpy as np
@@ -196,6 +196,7 @@ print('Test accuracy: %.4f%%' % test_accuracy)
 ```
 
 ## Below are some samples of the results obtained using 
+![results](https://user-images.githubusercontent.com/14510359/39162285-ceb86e00-4742-11e8-8430-c088984dc5e7.png)
 
 
 
